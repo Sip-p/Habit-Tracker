@@ -180,7 +180,7 @@ return (
   <div className="absolute w-42 h-42 border-4 border-white rounded-full animate-spin-slow mx-auto top-10 z-0  "></div>
 
   {/* Styles */}
-  <style jsx>{`
+  //<style jsx>{`
     @keyframes spin-slow {
       0% {
         transform: rotateY(0deg);
