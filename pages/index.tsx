@@ -296,7 +296,10 @@ return (
             <h4 className="font-bold mb-2">Your Daily Check-ins</h4>
             <div className="space-y-4 overflow-y-auto max-h-[600px] scrollbar-hide">
               {selectedHabits.map(habit => (
-                <div key={habit} className="bg-blue-100 p-3 rounded-xl">
+                <div
+                key={habit}
+                className="bg-blue-100 p-3 rounded-xl hover:bg-blue-200 hover:scale-90 hover:shadow-sm transition-all duration-300 ease-in-out"
+              >
                   <div className="flex justify-between mb-1">
                     <span className="font-semibold text-black">{habit}</span>
                     <span className="text-green-600 font-bold">{habitCheckins[habit] || 0}%</span>
