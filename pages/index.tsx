@@ -302,13 +302,13 @@ return (
                     <span className="text-green-600 font-bold">{habitCheckins[habit] || 0}%</span>
                   </div>
                   <input  
-                    type="range"
-                    min="0"
-                    max="100"
-                    value={habitCheckins[habit] || 0}
-                    onChange={e => handleSliderChange(habit, parseInt(e.target.value))}
-                    className="w-full "
-                  />
+  type="range"
+  min="0"
+  max="100"
+  value={String(dailyGoals[habit]) === '' ? 0 : (habitCheckins[habit] || 0)}
+  onChange={e => handleSliderChange(habit, parseInt(e.target.value))}
+  className="w-full"
+/>
                   <div className="text-l mt-1 text-gray-500">
                     Daily Goal:
                     <input
