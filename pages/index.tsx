@@ -30,7 +30,7 @@ export default function HabitTrackerApp() {
   const [selectedHabits, setSelectedHabits] = useState<string[]>([]);
   const [habitCheckins, setHabitCheckins] = useState<HabitCheckins>({});
   const [dailyGoals, setDailyGoals] = useState<DailyGoals>({});
-  const [streak, setStreak] = useState<number>(1);
+  const [streak, setStreak] = useState<number>(() => Math.floor(Math.random() * 100) + 1);
   const [currentDay, setCurrentDay] = useState<string>('');
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');  // Track theme
  
